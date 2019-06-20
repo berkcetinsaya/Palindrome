@@ -154,20 +154,27 @@ int main()
 {
 	int count = 0;
 	cout << endl;
+
 	Stack *s = fileToStack("palindrome.txt");
 	Stack *queue = create(s -> size);
+
 	while (!isEmpty(s))
 		push(queue,show_n_del(s));
+	
 	delete s;
+
 	Queue *q = q_element(""); // create empty queue #2
+
 	while (!isEmpty(queue))
 	{
 		string c = show_n_del(queue);
 		enqueue(q, c); // add to queue #2
 	}
+	
 	q = q -> next; // remove initial pointer #2
 	printQ(q);
 	cout << endl;
+
 	while (q != NULL) // while queue is not empty #2
 	{
 		string c;
@@ -177,8 +184,11 @@ int main()
 		else
 			cout << c << " is not palindrome "<< endl;
 	}
+
 	cout << "\n" << count << " palindrome" << ((count == 1)?"":"s") << " found..." <<endl;
 	cout << endl;
+
 	delete queue;
+
 	return 0;
 }
