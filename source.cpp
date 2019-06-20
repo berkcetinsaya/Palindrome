@@ -3,7 +3,7 @@
 #include <string>
 
 #define DEF_SIZE 50
-#define FILENAME "*.txt"
+#define FILENAME "palindrome.txt"
 
 using namespace std;
 
@@ -155,7 +155,7 @@ int main()
 	int count = 0;
 	cout << endl;
 
-	Stack *s = fileToStack("palindrome.txt");
+	Stack *s = fileToStack(FILENAME);
 	Stack *queue = create(s -> size);
 
 	while (!isEmpty(s))
