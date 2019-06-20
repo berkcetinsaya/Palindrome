@@ -19,11 +19,11 @@ make clean
 ```
 Otherwise, you can compile it without using makefile.
 ```
-g++ source.cpp -o source
+g++ source.cpp -o source.out
 ```
 To execute,
 ```
-./source
+./source.out
 ```
 
 

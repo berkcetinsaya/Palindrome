@@ -1,9 +1,9 @@
 all: source
-	./source
+	./source.out
 
 source:
-	g++ $@.cpp -D 'FILENAME="palindrome.txt"' -ggdb -o $@ -w
+	g++ $@.cpp -D 'FILENAME="palindrome.txt"' -ggdb -o $@.out -w
 
 clean:
-	rm source
+	rm source.out
 
